@@ -114,7 +114,7 @@ Node具有事件循环(Event loop)的处理能力, 在处理异步I/O请求上�
 
 - #### 分布式应用
 
-先简单了解一下**分布式应用**: 就是将一个完成的应用, 按照业务功能拆分成一个个独立的子系统, 在分布式结构中, 每个子系统就被称为“服务”, 这些子系统独立运行在web容器中, 它们之间通过远程过程调用RPC(Remote Procedure Call)方式通信.
+先简单了解一下**分布式应用**: 就是将一个完整的应用, 按照业务功能拆分成一个个独立的子系统, 在分布式结构中, 每个子系统就被称为“服务”, 这些子系统独立运行在web容器中, 它们之间通过远程过程调用RPC(Remote Procedure Call)方式通信.
 
 ##### 分布式的好处
 
@@ -133,5 +133,5 @@ Node也十分适用于分布式应用, Node事件循环(Event loop)机制使其�
 - [《深入浅出Nodejs》 - 朴灵](http://www.ituring.com.cn/book/1290)
 - [《Node.js：浅析高并发与分布式集群》](https://zhuanlan.zhihu.com/p/41118827)
 - [单线程--百度文库](https://baike.baidu.com/item/%E5%8D%95%E7%BA%BF%E7%A8%8B)
-- [分布式系统](https://baike.baidu.com/item/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F)
+- [分布式系统--百度文库](https://baike.baidu.com/item/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F)
 - [Node.js官方文档](https://nodejs.org/en/docs/)
