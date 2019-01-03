@@ -1,5 +1,13 @@
 ## Your first nodejs
 
+- 创建一个first.js文件: 
+
+```
+> cd ~/desktop
+> touch first-node.js
+> vi first-node.js
+```
+- 向first-node.js中写入如下的代码:
 ```
 // 引入http模块
 const http = require('http');
@@ -20,5 +28,9 @@ http.createServer((req, res) => {
   console.log(`Server running at http://${hostname}:${port}/`);
 })
 ```
+- 运行:
 
+```
+> node first-node.js
+```
 此时, 用浏览器打开 ```http://127.0.0.1:2333```, 就可以看到"Hello World".
