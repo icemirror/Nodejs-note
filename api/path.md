@@ -65,7 +65,7 @@ console.log(resolve('./')) // => /Users/goodhome/Desktop/first-node
 console.log(resolve('./', '../')) // => /Users/goodhome/Desktop
 ```
 
-- ### path.basename path.extname path.dirname
+- ### path.basename / path.extname / path.dirname
 
 ```
 // 用法
@@ -96,7 +96,7 @@ console.log(basename(filePath)) // => test.txt
 console.log(extname(filePath))  // => .txt
 console.log(dirname(filePath))  // =>  /usr/local/bin
 ```
-- ### path.parse path.format
+- ### path.parse / path.format
 
 path.parse用于将路径转换为一个对象, 这个对象包括了路径的重要属性(根目录, 目录名称, 文件名, 扩展名等...)); path.format则与parse作用相反
 
