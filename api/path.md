@@ -135,3 +135,74 @@ format({
 })
 // => /usr/local/bin/test.txt
 ```
+
+PS:
+
+- 如果存在dir的情况下, root会被忽略;
+- 如果存在base的情况下, name和ext会被忽略;
+
+```
+path.format({
+    root: 'ignored',
+    dir: '/home/user/dir',
+    base: 'file.txt'
+})
+
+// => /home/user/dir/file.text
+
+// 当dir存在时,会忽略root属性
+```
+
+```
+path.format({
+    root: '/'
+    name: 'ignored',
+    base: 'file.txt',
+    ext: 'ignored'
+})
+
+// => /file.txt
+// 当存在base时, name和ext都会被忽略
+
+```
+
+- ### path.sep / path.delimiter
+
+path.sep是为特定平台提供的路径分隔符, Windows ```\```  POSIX ```/```
+
+path.delimiter是为特定平台提供的环境变量(path)的分隔符, Windows ```;``` POSIX ```:```
+
+```
+// 用法
+path.sep // => \ or /
+path.delimiter // => ; or :
+
+// 例子
+const {sep, delimiter} = require('path')
+
+// on POSIX (/):
+
+'foo/bar/baz'.split(path.sep) // => ['foo', 'bar', 'baz'] 以'/'作为分隔符分割
+
+console.log(process.env.PATH)
+// => /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin 以':'作为分隔符分割
+
+process.env.PATH.split(path.delimiter)
+
+// => ['/user/bin', 'bin', 'usr/sbin', 'sbin', 'usr/local/bin'] 
+
+// on Windows (\):
+
+'foo\\bar\\baz'.split(path.sep) // => ['foo', 'bar', 'sep'] 以'\'作为分隔符分割
+
+console.log(process.env.PATH)
+// => C:\Windows\system32;C:\Windwos;C:\Program Files\node\ 以';'作为分隔符分割
+
+process.env.PATH.split(path.delimiter)
+
+// => ['C:\\Windows\\system32', 'C:\\Windows', 'C:\\Program Files\\node\\']
+```
+
+- ### path.posix / path.win32
+
+path.posix/path.win32属性是提供对posix或windows路径下的特定方法实现(一个对象)的访问.
